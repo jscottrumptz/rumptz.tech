@@ -27,7 +27,7 @@ function Nav() {
                                 </svg>
                             </button>
                         </div>
-                        <div className="flex-shrink-0 flex items-center">
+                        <div className="flex-shrink-0 flex items-center z-50">
                             <img className="block lg:hidden pl-4 pt-3 h-28 w-auto"
                                  src={logo} alt="J. Scott Rumptz"/>
                                 <img className="hidden lg:block pt-3 h-28 w-auto"
