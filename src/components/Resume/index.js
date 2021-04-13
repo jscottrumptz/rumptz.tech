@@ -1,9 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import headshot from "../../assets/images/j-scott-rumptz_2.jpg";
 import background from "../../assets/images/background.jpg"
 import resume from "../../assets/J_Scott_Rumptz_Resume.pdf"
 
 function Resume() {
+
+    const [tab, setTab] = useState('overview')
+
+    let overviewContent = '';
+    let professionalContent = '';
+    let educationContent = '';
+    let overviewTab = '';
+    let professionalTab = '';
+    let educationTab = '';
+
+
+    if (tab === 'overview') {
+        overviewContent = 'mt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8';
+        professionalContent = 'hidden';
+        educationContent = 'hidden';
+        overviewTab = 'border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        professionalTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        educationTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+    }
+
+    if (tab === 'professional') {
+        overviewContent = 'hidden';
+        professionalContent = 'mt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8';
+        educationContent = 'hidden';
+        overviewTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        professionalTab = 'border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        educationTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+    }
+
+    if (tab === 'education') {
+        overviewContent = 'hidden';
+        professionalContent = 'hidden';
+        educationContent = 'mt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8';
+        overviewTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        professionalTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        educationTab = 'border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+    }
+
+
     return (
         <main className="bg-gray-50 pt-16">
             <article>
@@ -81,25 +120,24 @@ function Resume() {
                     </div>
                 </div>
 
-
                 <div className="mt-6 sm:mt-2 2xl:mt-5">
                     <div className="border-b border-gray-200">
                         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                             <nav className="-mb-px flex space-x-8" aria-label="Tabs">
 
-                                <a href="#"
-                                   className="border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"
+                                <a href="#" onClick={() => setTab('overview')}
+                                   className={overviewTab}
                                    aria-current="page">
                                     Overview
                                 </a>
 
-                                <a href="#"
-                                   className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                                <a href="#" onClick={() => setTab('professional')}
+                                   className={professionalTab}>
                                     Professional Experience
                                 </a>
 
-                                <a href="#"
-                                   className="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
+                                <a href="#" onClick={() => setTab('education')}
+                                   className={educationTab}>
                                     Education
                                 </a>
                             </nav>
@@ -108,7 +146,7 @@ function Resume() {
                 </div>
 
 
-                <div className="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className={overviewContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                         <div className="sm:col-span-1">
                             <dt className="text-sm font-medium text-gray-500">
@@ -217,7 +255,7 @@ function Resume() {
                     </dl>
                 </div>
 
-                <div className="hidden mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className={professionalContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
                         <div className="sm:col-span-1">
                             <dt className="text-sm font-medium text-gray-500">
@@ -303,8 +341,8 @@ function Resume() {
                     </dl>
                 </div>
 
-                <div className="hidden mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                <div className={educationContent}>
+                    <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
                         <div className="sm:col-span-1">
                             <dt className="text-sm font-medium text-gray-500">
                                 Vanderbilt University
@@ -314,7 +352,7 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-1">
+                        <div className="sm:col-span-3">
                             <dt className="text-sm font-medium text-gray-500">
                                 Full Stack Web Development Bootcamp
                             </dt>
@@ -332,7 +370,7 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-1">
+                        <div className="sm:col-span-3">
                             <dt className="text-sm font-medium text-gray-500">
                                 Associates Degree in Philosophy
                             </dt>
@@ -350,7 +388,7 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-1">
+                        <div className="sm:col-span-3">
                             <dt className="text-sm font-medium text-gray-500">
                                 Professional Certification
                             </dt>
@@ -368,7 +406,7 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-1">
+                        <div className="sm:col-span-3">
                             <dt className="text-sm font-medium text-gray-500">
                                 Professional Certification
                             </dt>
