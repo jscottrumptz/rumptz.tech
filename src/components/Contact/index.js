@@ -9,7 +9,7 @@ function Contact() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-3">
 
-                        <div className="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
+                        <div className="relative overflow-hidden py-10 px-6 bg-gray-600 sm:px-10 xl:p-12">
                             <h3 className="text-lg font-medium text-white">Contact information</h3>
                             <p className="mt-6 text-base font-medium text-indigo-50 max-w-3xl">Have questions or comments?<br/>
                                 <span className="italic font-normal">I'd love to hear them.</span><br/><br/>
@@ -21,27 +21,27 @@ function Contact() {
                                 <dt><span className="sr-only">Phone number</span></dt>
                                 <dd className="flex text-base text-indigo-50">
 
-                                    <svg className="flex-shrink-0 w-6 h-6 text-indigo-200" xmlns="http://www.w3.org/2000/svg"
+                                    <svg className="flex-shrink-0 w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg"
                                          fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                               d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                     </svg>
-                                    <a href="tel:19013382186" className="ml-3">+1 (901) 338-2186</a>
+                                    <a href="tel:19013382186" className="ml-3 hover:text-indigo-300">+1 (901) 338-2186</a>
                                 </dd>
                                 <dt><span className="sr-only">Email</span></dt>
                                 <dd className="flex text-base text-indigo-50">
 
-                                    <svg className="flex-shrink-0 w-6 h-6 text-indigo-200" xmlns="http://www.w3.org/2000/svg"
+                                    <svg className="flex-shrink-0 w-6 h-6 text-gray-300" xmlns="http://www.w3.org/2000/svg"
                                          fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                                     </svg>
-                                    <a href="mailto:jscott@rumptz.tech" className="ml-3">jscott@rumptz.tech</a>
+                                    <a href="mailto:jscott@rumptz.tech" className="ml-3 hover:text-indigo-300">jscott@rumptz.tech</a>
                                 </dd>
                             </dl>
                             <ul className="mt-8 flex space-x-12">
                                 <li>
-                                    <a className="text-indigo-200 hover:text-indigo-100" target="_blank" rel="noreferrer" href="https://www.facebook.com/jscott.rumptz">
+                                    <a className="text-gray-300 hover:text-indigo-300" target="_blank" rel="noreferrer" href="https://www.facebook.com/jscott.rumptz">
                                         <span className="sr-only">Facebook</span>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                              className="w-6 h-6" aria-hidden="true">
@@ -52,7 +52,7 @@ function Contact() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="text-indigo-200 hover:text-indigo-100"  target="_blank" rel="noreferrer" href="https://github.com/jscottrumptz">
+                                    <a className="text-gray-300 hover:text-indigo-300"  target="_blank" rel="noreferrer" href="https://github.com/jscottrumptz">
                                         <span className="sr-only">GitHub</span>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                                              className="w-6 h-6" aria-hidden="true">
@@ -63,7 +63,7 @@ function Contact() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="text-indigo-200 hover:text-indigo-100"  target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jscottrumptz/">
+                                    <a className="text-gray-300 hover:text-indigo-300"  target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/jscottrumptz/">
                                         <span className="sr-only">LinkedIn</span>
                                         <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
                                              aria-hidden="true">
