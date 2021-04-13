@@ -5,7 +5,7 @@ import resume from "../../assets/J_Scott_Rumptz_Resume.pdf"
 
 function Resume() {
     return (
-        <main className="bg-gray-50">
+        <main className="bg-gray-50 pt-16">
             <article>
 
                 <div>

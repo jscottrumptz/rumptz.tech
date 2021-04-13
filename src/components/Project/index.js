@@ -6,6 +6,7 @@ import friendziesImage from "../../assets/images/projects/friendzies.jpg"
 import suKidsImage from '../../assets/images/projects/standupkids.jpg'
 import riftsImage from '../../assets/images/projects/riftscc.jpg'
 import rumptzImage from '../../assets/images/projects/rumptz-html.JPG'
+import thisImage from '../../assets/images/projects/this-site.jpg'
 
 function Project() {
     const [projects] = useState([
@@ -101,6 +102,20 @@ function Project() {
                     'Adobe Audition',
                     '3ds Max'
                 ]
+        },
+        {
+            image: thisImage,
+            title: 'rumptz.tech',
+            description:`Conceptualized, produced, directed, edited, and did effects for a thirty minute educational children's DVD.`,
+            repoLink: 'https://github.com/jscottrumptz/rumptz.tech',
+            skills:
+                [
+                    'React',
+                    'Tailwind',
+                    'JavaScript',
+                    'Adobe Photoshop',
+                    'Adobe Illustrator'
+                ]
         }
     ])
 
@@ -110,7 +125,7 @@ function Project() {
             { projects.map((project) => (
                 <li className="col-span-1 flex flex-col text-center bg-gray-600 rounded-lg shadow divide-y divide-gray-200">
                     <div className="flex-1 flex flex-col pb-8">
-                        <a href={project.deployLink} target="_blank" rel="noreferrer">
+                        <a href={!project.deployLink ? (project.repoLink ) : (project.deployLink )} target="_blank" rel="noreferrer">
                         <img className="w-full flex-shrink-0 mx-auto rounded-t-lg"
                              src={project.image}
                              alt={project.title}/>
@@ -130,6 +145,7 @@ function Project() {
                     </div>
                     <div>
                         <div className="-mt-px flex divide-x divide-indigo-100">
+                            {project.deployLink &&
                             <div className="w-0 flex-1 flex">
                                 <a href={project.deployLink} target="_blank" rel="noreferrer"
                                    className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-200 font-medium border border-transparent rounded-bl-lg hover:text-indigo-300">
@@ -142,6 +158,7 @@ function Project() {
                                     <span className="ml-3">View Project</span>
                                 </a>
                             </div>
+                            }
                             {project.repoLink &&
                             <div className="-ml-px w-0 flex-1 flex">
                                 <a href={project.repoLink} target="_blank" rel="noreferrer"

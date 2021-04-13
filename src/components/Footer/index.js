@@ -1,31 +1,38 @@
 import React from 'react';
 
-function Footer() {
+function Footer(props) {
+    const {
+        setPage
+    } = props;
+
     return (
         <footer className="bg-gray-50">
             <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
                 <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                     <div className="px-5 py-2">
-                        <a href="#"
+                        <a href="#" onClick={() => setPage('about')}
                            className="text-base text-gray-500 hover:text-gray-900">
                             About
                         </a>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="#" className="text-base text-gray-500 hover:text-gray-900">
+                        <a href="#" onClick={() => setPage('portfolio')}
+                            className="text-base text-gray-500 hover:text-gray-900">
                             Portfolio
                         </a>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="#" className="text-base text-gray-500 hover:text-gray-900">
+                        <a href="#" onClick={() => setPage('resume')}
+                            className="text-base text-gray-500 hover:text-gray-900">
                             Resume
                         </a>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="#" className="text-base text-gray-500 hover:text-gray-900">
+                        <a href="#" onClick={() => setPage('contact')}
+                            className="text-base text-gray-500 hover:text-gray-900">
                             Contact
                         </a>
                     </div>

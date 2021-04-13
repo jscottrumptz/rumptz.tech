@@ -1,7 +1,11 @@
 import React from 'react';
 import headshot from "../../assets/images/j-scott-rumptz.jpg";
 
-function About() {
+function About(props) {
+    const {
+        setPage
+    } = props;
+
     return (
         <main className="lg:relative bg-gray-50">
             <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
@@ -22,7 +26,7 @@ function About() {
                     </p>
                     <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                         <div className="rounded-md shadow">
-                            <a href="#"
+                            <a href="#" onClick={() => setPage('resume')}
                                className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                                 View Resume
                             </a>
