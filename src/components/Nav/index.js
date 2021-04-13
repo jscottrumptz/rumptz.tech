@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from "../../assets/images/logo.svg";
 import Portfolio from "../Portfolio";
 
@@ -8,13 +8,15 @@ function Nav(props) {
         setPage
     } = props;
 
+    const [hidden, setHidden] = useState('hidden')
+
     return (
         <nav className="bg-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex">
                         <div className="-ml-2 mr-2 flex items-center md:hidden">
-
+                            <a onClick={() => setHidden('px-2 pt-2 pb-3 space-y-1 sm:px-3')}>
                             <button type="button"
                                     className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                                     aria-controls="mobile-menu" aria-expanded="false">
@@ -32,6 +34,7 @@ function Nav(props) {
                                           d="M6 18L18 6M6 6l12 12"/>
                                 </svg>
                             </button>
+                            </a>
                         </div>
                         <div className="flex-shrink-0 flex items-center z-50">
                             <img className="block lg:hidden pl-4 pt-3 h-28 w-auto"
@@ -91,17 +94,31 @@ function Nav(props) {
 
 
             <div className="md:hidden" id="mobile-menu">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div className={hidden}>
 
-                    <a href="#" onClick={() => setPage('about')}
-                       className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                       aria-current="page">About</a>
+                    { page === 'about' &&  <a href="#" onClick={function() {setPage('about'); setHidden('hidden');}}
+                        className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">About</a> }
 
-                    <a href="#" onClick={() => setPage('portfolio')}
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                    { page != 'about' &&  <a href="#" onClick={function() {setPage('about'); setHidden('hidden');}}
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >About</a> }
 
-                    <a href="#" onClick={() => setPage('resume')}
-                       className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Resume</a>
+                    { page === 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
+                        className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">Portfolio</a> }
+
+                    { page != 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Portfolio</a> }
+
+                    { page === 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setHidden('hidden');}}
+                        className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                        aria-current="page">Resume</a> }
+
+                    { page != 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setHidden('hidden');}}
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        >Resume</a> }
 
                 </div>
             </div>

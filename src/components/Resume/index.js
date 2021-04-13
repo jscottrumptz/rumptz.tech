@@ -2,6 +2,12 @@ import React, {useState} from 'react';
 import headshot from "../../assets/images/j-scott-rumptz_2.jpg";
 import background from "../../assets/images/background.jpg"
 import resume from "../../assets/J_Scott_Rumptz_Resume.pdf"
+import rdjLogo from "../../assets/images/projects/RDJ_Logo.png"
+import dverseLogo from "../../assets/images/projects/D-verse_Logo.png"
+import devuLogo from "../../assets/images/projects/devu_logo.png"
+import vandyLogo from "../../assets/images/projects/Vandebilt_Logo.png"
+import memphisLogo from "../../assets/images/projects/Memphis_logo.png"
+import comptiaLogo from "../../assets/images/projects/Comptia_logo.png"
 
 function Resume() {
 
@@ -13,7 +19,6 @@ function Resume() {
     let overviewTab = '';
     let professionalTab = '';
     let educationTab = '';
-
 
     if (tab === 'overview') {
         overviewContent = 'mt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8';
@@ -258,6 +263,9 @@ function Resume() {
                 <div className={professionalContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
                         <div className="sm:col-span-1">
+                            <dd>
+                                <img src={rdjLogo} alt="rdj specialties, inc logo"/>
+                            </dd>
                             <dt className="text-sm font-medium text-gray-500">
                                 RDJ Specialties, Inc.
                             </dt>
@@ -303,6 +311,9 @@ function Resume() {
                             </dd>
                         </div>
                         <div className="sm:col-span-1">
+                            <dd>
+                                <img src={dverseLogo} alt="d-verse publishing, llc logo"/>
+                            </dd>
                             <dt className="text-sm font-medium text-gray-500">
                                 D-Verse Publishing, LLC
                             </dt>
@@ -344,6 +355,9 @@ function Resume() {
                 <div className={educationContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
                         <div className="sm:col-span-1">
+                            <dd>
+                                <img src={vandyLogo} alt="vanderbilt logo"/>
+                            </dd>
                             <dt className="text-sm font-medium text-gray-500">
                                 Vanderbilt University
                             </dt>
@@ -362,6 +376,9 @@ function Resume() {
                         </div>
 
                         <div className="sm:col-span-1">
+                            <dd>
+                                <img src={memphisLogo} alt="university of memphis logo"/>
+                            </dd>
                             <dt className="text-sm font-medium text-gray-500">
                                 University of Memphis
                             </dt>
@@ -380,6 +397,9 @@ function Resume() {
                         </div>
 
                         <div className="sm:col-span-1">
+                            <dd>
+                                <img src={comptiaLogo} alt="comptia logo"/>
+                            </dd>
                             <dt className="text-sm font-medium text-gray-500">
                                 A+ Certification, CompTIA
                             </dt>
@@ -398,6 +418,9 @@ function Resume() {
                         </div>
 
                         <div className="sm:col-span-1">
+                            <dd>
+                                <img src={devuLogo} alt="DevU logo"/>
+                            </dd>
                             <dt className="text-sm font-medium text-gray-500">
                                 DEVU C#
                             </dt>
