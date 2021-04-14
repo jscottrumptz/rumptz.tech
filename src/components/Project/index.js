@@ -106,7 +106,7 @@ function Project() {
         {
             image: thisImage,
             title: 'rumptz.tech',
-            description:`Conceptualized, produced, directed, edited, and did effects for a thirty minute educational children's DVD.`,
+            description:`Take a look at the GitHub repository for this website.`,
             repoLink: 'https://github.com/jscottrumptz/rumptz.tech',
             skills:
                 [

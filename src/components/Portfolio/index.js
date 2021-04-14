@@ -6,7 +6,7 @@ function Portfolio() {
     return (
         <main className="bg-gray-50 pt-16">
             <div className="relative bg-gray-800">
-                <div className="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+                <div className="h-56 bg-gray-800 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
                     <img className="w-full h-full object-cover"
                          src={heroImage}
                          alt=""/>

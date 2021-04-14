@@ -150,7 +150,6 @@ function Resume() {
                     </div>
                 </div>
 
-
                 <div className={overviewContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                         <div className="sm:col-span-1">
@@ -263,7 +262,7 @@ function Resume() {
                 <div className={professionalContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
                         <div className="sm:col-span-1">
-                            <dd>
+                            <dd className="w-3/4 sm:w-5/6 pb-5 sm:pb-2 mx-auto sm:mx-0">
                                 <img src={rdjLogo} alt="rdj specialties, inc logo"/>
                             </dd>
                             <dt className="text-sm font-medium text-gray-500">
@@ -289,7 +288,7 @@ function Resume() {
                                 • Spearhead marketing activities including: development of sales materials, website
                                 management, innovation of promotional campaigns, and compilation of market profile and
                                 statistics for each market.<br/><br/>
-                                <span className="font-medium text-gray-500">• Involved with all aspects of:</span><br/>
+                                <span className="font-medium text-gray-500">Involved with all aspects of:</span><br/>
                                 - website design / e-commerce strategies <br/>
                                 - new product development <br/>
                                 - marketing/branding<br/>
@@ -310,8 +309,8 @@ function Resume() {
                                 audience strategies and implementing goal oriented/track able telemarketing programs.
                             </dd>
                         </div>
-                        <div className="sm:col-span-1">
-                            <dd>
+                        <div className="sm:col-span-1 pt-20">
+                            <dd className="w-1/2 sm:w-3/4 pb-5 sm:pb-2 mx-auto sm:mx-0">
                                 <img src={dverseLogo} alt="d-verse publishing, llc logo"/>
                             </dd>
                             <dt className="text-sm font-medium text-gray-500">
@@ -322,7 +321,7 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-3">
+                        <div className="sm:col-span-3 sm:pt-20">
                             <dt className="text-sm font-medium text-gray-500">
                                 Founder
                             </dt>
@@ -334,14 +333,14 @@ function Resume() {
                                 • Develop innovative board game and table top role playing mechanics.<br/>
                                 • Spearhead marketing activities including: social media, website management, innovation
                                 of promotional campaigns, and market branding.<br/><br/>
-                                • Involved with all aspects of:<br/>
+                                <span className="font-medium text-gray-500">Involved with all aspects of:</span><br/>
                                 - website design / e-commerce strategies<br/>
                                 - game development<br/>
                                 - social media marketing/branding<br/>
                                 - art direction<br/>
                                 - vendor sourcing/selection <br/>
                                 - convention planning/management<br/><br/>
-                                Achievements:<br/>
+                                <span className="font-medium text-gray-500">Achievements:</span><br/>
                                 - Raised over $50,000 in initial Kickstarter campaign.<br/>
                                 - Successfully funded and shipped multiple Kickstarters.<br/>
                                 - Created an intellectual property that now features its own board game, tabletop RPG, and novel.<br/>
@@ -355,7 +354,7 @@ function Resume() {
                 <div className={educationContent}>
                     <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-4">
                         <div className="sm:col-span-1">
-                            <dd>
+                            <dd className="w-1/2 sm:w-2/3 mx-auto sm:mx-0 pb-5 sm:pb-2">
                                 <img src={vandyLogo} alt="vanderbilt logo"/>
                             </dd>
                             <dt className="text-sm font-medium text-gray-500">
@@ -366,17 +365,17 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-3">
+                        <div className="sm:col-span-3 self-center">
                             <dt className="text-sm font-medium text-gray-500">
                                 Full Stack Web Development Bootcamp
                             </dt>
-                            <dd className="mt-1 text-sm text-gray-900">
+                            <dd className="mt-1 text-sm text-gray-900 pb-20 sm:pb-0">
                                 Currently Enrolled
                             </dd>
                         </div>
 
                         <div className="sm:col-span-1">
-                            <dd>
+                            <dd className="w-3/4 sm:w-3/4 mx-auto sm:mx-0 pb-5 sm:pb-2">
                                 <img src={memphisLogo} alt="university of memphis logo"/>
                             </dd>
                             <dt className="text-sm font-medium text-gray-500">
@@ -387,17 +386,17 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-3">
+                        <div className="sm:col-span-3 self-center">
                             <dt className="text-sm font-medium text-gray-500">
                                 Associates Degree in Philosophy
                             </dt>
-                            <dd className="mt-1 text-sm text-gray-900">
+                            <dd className="mt-1 text-sm text-gray-900 pb-20 sm:pb-0">
                                 5/98
                             </dd>
                         </div>
 
                         <div className="sm:col-span-1">
-                            <dd>
+                            <dd className="w-2/3 sm:w-3/4 mx-auto sm:mx-0 pb-5 sm:pb-2">
                                 <img src={comptiaLogo} alt="comptia logo"/>
                             </dd>
                             <dt className="text-sm font-medium text-gray-500">
@@ -408,17 +407,17 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-3">
+                        <div className="sm:col-span-3 self-center">
                             <dt className="text-sm font-medium text-gray-500">
                                 Professional Certification
                             </dt>
-                            <dd className="mt-1 text-sm text-gray-900">
+                            <dd className="mt-1 text-sm text-gray-900 pb-20 sm:pb-0">
 
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-1">
-                            <dd>
+                        <div className="sm:col-span-1 sm:pt-10">
+                            <dd className="w-5/6 sm:w-3/4 mx-auto sm:mx-0 pb-5 sm:pb-2">
                                 <img src={devuLogo} alt="DevU logo"/>
                             </dd>
                             <dt className="text-sm font-medium text-gray-500">
@@ -429,16 +428,17 @@ function Resume() {
                             </dd>
                         </div>
 
-                        <div className="sm:col-span-3">
+                        <div className="sm:col-span-3 self-center">
                             <dt className="text-sm font-medium text-gray-500">
                                 Professional Certification
                             </dt>
-                            <dd className="mt-1 text-sm text-gray-900">
+                            <dd className="mt-1 text-sm text-gray-900 pb-20 sm:pb-0">
 
                             </dd>
                         </div>
                     </dl>
                 </div>
+
             </article>
         </main>
     )

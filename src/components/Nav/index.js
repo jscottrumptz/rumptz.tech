@@ -45,29 +45,29 @@ function Nav(props) {
                         </div>
                         <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
 
-                            { page === 'about' &&  <a href="#"  onClick={() => setPage('about')}
+                            { page === 'about' &&  <a href="#about"  onClick={() => setPage('about')}
                                className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 About
                             </a> }
-                            { page != 'about' &&  <a href="#"  onClick={() => setPage('about')}
+                            { page != 'about' &&  <a href="#about"  onClick={() => setPage('about')}
                                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                 About
                             </a> }
 
-                            { page === 'portfolio' &&  <a href="#"  onClick={() => setPage('portfolio')}
+                            { page === 'portfolio' &&  <a href="#portfolio"  onClick={() => setPage('portfolio')}
                                                       className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 Portfolio
                             </a> }
-                            { page != 'portfolio' &&  <a href="#"  onClick={() => setPage('portfolio')}
+                            { page != 'portfolio' &&  <a href="#portfolio"  onClick={() => setPage('portfolio')}
                                                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                 Portfolio
                             </a> }
 
-                            { page === 'resume' &&  <a href="#"  onClick={() => setPage('resume')}
+                            { page === 'resume' &&  <a href="#resume"  onClick={() => setPage('resume')}
                                                           className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 Resume
                             </a> }
-                            { page != 'resume' &&  <a href="#"  onClick={() => setPage('resume')}
+                            { page != 'resume' &&  <a href="#resume"  onClick={() => setPage('resume')}
                                                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                 Resume
                             </a> }
@@ -75,7 +75,7 @@ function Nav(props) {
                     </div>
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <a href="#" onClick={() => setPage('contact')}>
+                            <a href="#contact" onClick={() => setPage('contact')}>
                                 <button type="button"
                                         className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">
 
@@ -96,27 +96,27 @@ function Nav(props) {
             <div className="md:hidden" id="mobile-menu">
                 <div className={hidden}>
 
-                    { page === 'about' &&  <a href="#" onClick={function() {setPage('about'); setHidden('hidden');}}
+                    { page === 'about' &&  <a href="#about" onClick={function() {setPage('about'); setHidden('hidden');}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">About</a> }
 
-                    { page != 'about' &&  <a href="#" onClick={function() {setPage('about'); setHidden('hidden');}}
+                    { page != 'about' &&  <a href="#about" onClick={function() {setPage('about'); setHidden('hidden');}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >About</a> }
 
-                    { page === 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
+                    { page === 'portfolio' &&  <a href="#portfolio" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">Portfolio</a> }
 
-                    { page != 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
+                    { page != 'portfolio' &&  <a href="#portfolio" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >Portfolio</a> }
 
-                    { page === 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setHidden('hidden');}}
+                    { page === 'resume' &&  <a href="#resume" onClick={function() {setPage('resume'); setHidden('hidden');}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">Resume</a> }
 
-                    { page != 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setHidden('hidden');}}
+                    { page != 'resume' &&  <a href="#resume" onClick={function() {setPage('resume'); setHidden('hidden');}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >Resume</a> }
 
