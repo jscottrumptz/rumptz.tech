@@ -8,7 +8,16 @@ function Nav(props) {
         setPage
     } = props;
 
+    const [toggleHidden, setToggle] = useState(true)
     const [hidden, setHidden] = useState('hidden')
+
+    if (!toggleHidden && hidden === 'hidden') {
+        setHidden('px-2 pt-2 pb-3 space-y-1 sm:px-3')
+    }
+
+    if (toggleHidden && hidden === 'px-2 pt-2 pb-3 space-y-1 sm:px-3') {
+        setHidden('hidden')
+    }
 
     return (
         <nav className="bg-gray-800">
@@ -16,7 +25,7 @@ function Nav(props) {
                 <div className="flex justify-between h-16">
                     <div className="flex">
                         <div className="-ml-2 mr-2 flex items-center md:hidden">
-                            <a onClick={() => setHidden('px-2 pt-2 pb-3 space-y-1 sm:px-3')} onBlur={() => {setHidden('hidden')}}>
+                            <a onClick={() => setToggle(!toggleHidden)}>
                             <button type="button"
                                     className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                                     aria-controls="mobile-menu" aria-expanded="false">
@@ -96,27 +105,27 @@ function Nav(props) {
             <div className="md:hidden" id="mobile-menu">
                 <div className={hidden}>
 
-                    { page === 'about' &&  <a href="#" onClick={function() {setPage('about'); setHidden('hidden');}}
+                    { page === 'about' &&  <a href="#" onClick={function() {setPage('about'); setToggle(!toggleHidden);}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">About</a> }
 
-                    { page != 'about' &&  <a href="#" onClick={function() {setPage('about'); setHidden('hidden');}}
+                    { page != 'about' &&  <a href="#" onClick={function() {setPage('about'); setToggle(!toggleHidden);}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >About</a> }
 
-                    { page === 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
+                    { page === 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setToggle(!toggleHidden);}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">Portfolio</a> }
 
-                    { page != 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setHidden('hidden');}}
+                    { page != 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setToggle(!toggleHidden);}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >Portfolio</a> }
 
-                    { page === 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setHidden('hidden');}}
+                    { page === 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setToggle(!toggleHidden);}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                         aria-current="page">Resume</a> }
 
-                    { page != 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setHidden('hidden');}}
+                    { page != 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setToggle(!toggleHidden);}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >Resume</a> }
 
