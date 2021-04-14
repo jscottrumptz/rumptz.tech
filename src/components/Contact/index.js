@@ -1,15 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { validateEmail } from '../../utils/helpers';
 
 function Contact() {
+    const [errorMessage, setErrorMessage] = useState('');
+    const [formState, setFormState] = useState({ firstName: '', lastName: '', phone: '', email: '', subject: '', message: '' });
+    const { firstName, lastName, phone, email, subject, message } = formState;
+
+    let disabled = true;
+    let submitClass = 'cursor-default mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto'
+
+    function handleChange(e) {
+        if (e.target.name === 'email') {
+            const isValid = validateEmail(e.target.value);
+            console.log(isValid);
+            if (!isValid) {
+                setErrorMessage('Your email is invalid.');
+            }
+        }
+
+        if (!e.target.value.length && e.target.name != 'phone') {
+            setErrorMessage(`${e.target.name} is required.`);
+        } else {
+            setErrorMessage('');
+        }
+
+        if (!errorMessage) {
+            setFormState({ ...formState, [e.target.name]: e.target.value });
+        }
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        if (!disabled) {
+            console.log(formState);
+            setErrorMessage('Your message has been sent')
+        }
+    }
+
+    if (firstName && lastName && email && subject && message) {
+        disabled = false;
+        submitClass = 'mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto'
+    }
     return (
         <section className="bg-gray-50">
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
-                <div className="relative bg-white shadow-xl">
+            <div className="max-w-7xl mx-auto pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+                <div className="relative bg-white shadow-xl border-2 border-gray-800">
                     <h2 className="sr-only">Contact me</h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3">
 
-                        <div className="relative overflow-hidden py-10 px-6 bg-gray-600 sm:px-10 xl:p-12">
+                        <div className="relative overflow-hidden py-10 px-6 bg-gray-800 sm:px-10 xl:p-12">
                             <h3 className="text-lg font-medium text-white">Contact information</h3>
                             <p className="mt-6 text-base font-medium text-indigo-50 max-w-3xl">Have questions or comments?<br/>
                                 <span className="italic font-normal">I'd love to hear them.</span><br/><br/>
@@ -81,18 +121,20 @@ function Contact() {
                             <h3 className="text-lg font-medium text-gray-900">Send me a message</h3>
                             <p> I'll get back to you as soon as I am able.<br/>
                             <span className="italic">(usually within 24 hrs)</span></p>
-                            <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                            <form id="contact-form" onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                                 <div>
-                                    <label htmlFor="first_name" className="block text-sm font-medium text-gray-900">First name</label>
+                                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-900">First name</label>
                                     <div className="mt-1">
-                                        <input type="text" name="first_name" id="first_name" autoComplete="given-name"
+                                        <input type="text" name="firstName" id="firstName" autoComplete="given-name"
+                                               defaultValue={firstName} onChange={handleChange}
                                                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"/>
                                     </div>
                                 </div>
                                 <div>
-                                    <label htmlFor="last_name" className="block text-sm font-medium text-gray-900">Last name</label>
+                                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-900">Last name</label>
                                     <div className="mt-1">
-                                        <input type="text" name="last_name" id="last_name" autoComplete="family-name"
+                                        <input type="text" name="lastName" id="lastName" autoComplete="family-name"
+                                               defaultValue={lastName} onChange={handleChange}
                                                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"/>
                                     </div>
                                 </div>
@@ -100,6 +142,7 @@ function Contact() {
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-900">Email</label>
                                     <div className="mt-1">
                                         <input id="email" name="email" type="email" autoComplete="email"
+                                               defaultValue={email} onChange={handleChange}
                                                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"/>
                                     </div>
                                 </div>
@@ -109,7 +152,8 @@ function Contact() {
                                         <span id="phone-optional" className="text-sm text-gray-500">Optional</span>
                                     </div>
                                     <div className="mt-1">
-                                        <input type="text" name="phone" id="phone" autoComplete="tel"
+                                        <input type="text" name="phone" id="phone" autoComplete="phone"
+                                               defaultValue={phone} onChange={handleChange}
                                                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                                aria-describedby="phone-optional"/>
                                     </div>
@@ -118,6 +162,7 @@ function Contact() {
                                     <label htmlFor="subject" className="block text-sm font-medium text-gray-900">Subject</label>
                                     <div className="mt-1">
                                         <input type="text" name="subject" id="subject"
+                                               defaultValue={subject} onChange={handleChange}
                                                className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"/>
                                     </div>
                                 </div>
@@ -128,13 +173,17 @@ function Contact() {
                                     </div>
                                     <div className="mt-1">
                       <textarea id="message" name="message" rows="4"
+                                defaultValue={message} onChange={handleChange}
                                 className="py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                                 aria-describedby="message-max"></textarea>
                                     </div>
                                 </div>
                                 <div className="sm:col-span-2 sm:flex sm:justify-end">
-                                    <button type="submit"
-                                            className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto">
+                                    {errorMessage && (
+                                        <p className="font-medium text-2xl self-center pr-8 text-red-600">{errorMessage}</p>
+                                    )}
+                                    <button type="submit" disabled={disabled}
+                                            className={submitClass}>
                                         Submit
                                     </button>
                                 </div>

@@ -25,25 +25,25 @@ function Resume() {
         professionalContent = 'hidden';
         educationContent = 'hidden';
         overviewTab = 'border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
-        professionalTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
-        educationTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        professionalTab = 'cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        educationTab = 'cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
     }
 
     if (tab === 'professional') {
         overviewContent = 'hidden';
         professionalContent = 'mt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8';
         educationContent = 'hidden';
-        overviewTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        overviewTab = 'cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
         professionalTab = 'border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
-        educationTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        educationTab = 'cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
     }
 
     if (tab === 'education') {
         overviewContent = 'hidden';
         professionalContent = 'hidden';
         educationContent = 'mt-6 pb-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8';
-        overviewTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
-        professionalTab = 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        overviewTab = 'cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
+        professionalTab = 'cursor-pointer border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
         educationTab = 'border-indigo-500 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm';
     }
 
@@ -130,18 +130,18 @@ function Resume() {
                         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                             <nav className="-mb-px flex space-x-8" aria-label="Tabs">
 
-                                <a href="#" onClick={() => setTab('overview')}
+                                <a onClick={() => setTab('overview')}
                                    className={overviewTab}
                                    aria-current="page">
                                     Overview
                                 </a>
 
-                                <a href="#" onClick={() => setTab('professional')}
+                                <a onClick={() => setTab('professional')}
                                    className={professionalTab}>
                                     Professional Experience
                                 </a>
 
-                                <a href="#" onClick={() => setTab('education')}
+                                <a onClick={() => setTab('education')}
                                    className={educationTab}>
                                     Education
                                 </a>
