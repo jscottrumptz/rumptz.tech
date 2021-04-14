@@ -10,14 +10,14 @@ function App() {
     const [page, setPage] = useState('about')
 
     return (
-        <div className="App">
+        <div className="App w-full">
             <div className="fixed w-full z-50">
                 <Nav
                     page={page}
                     setPage={setPage}
                 />
             </div>
-            <div className="z-0">
+            <div className="w-full z-0">
                 { page === 'about' &&  <About
                     setPage={setPage}
                 /> }
