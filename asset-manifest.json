@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rumptz.tech/static/css/main.1c885fb9.chunk.css",
-    "main.js": "/rumptz.tech/static/js/main.7e6d5ff2.chunk.js",
-    "main.js.map": "/rumptz.tech/static/js/main.7e6d5ff2.chunk.js.map",
+    "main.js": "/rumptz.tech/static/js/main.a167f4a9.chunk.js",
+    "main.js.map": "/rumptz.tech/static/js/main.a167f4a9.chunk.js.map",
     "runtime-main.js": "/rumptz.tech/static/js/runtime-main.fe7d56d3.js",
     "runtime-main.js.map": "/rumptz.tech/static/js/runtime-main.fe7d56d3.js.map",
     "static/js/2.afeb9597.chunk.js": "/rumptz.tech/static/js/2.afeb9597.chunk.js",
@@ -37,6 +37,6 @@
     "static/js/runtime-main.fe7d56d3.js",
     "static/js/2.afeb9597.chunk.js",
     "static/css/main.1c885fb9.chunk.css",
-    "static/js/main.7e6d5ff2.chunk.js"
+    "static/js/main.a167f4a9.chunk.js"
   ]
 }
