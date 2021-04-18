@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rumptz.tech/static/css/main.ead2525d.chunk.css",
-    "main.js": "/rumptz.tech/static/js/main.2cfbdcec.chunk.js",
-    "main.js.map": "/rumptz.tech/static/js/main.2cfbdcec.chunk.js.map",
+    "main.js": "/rumptz.tech/static/js/main.e02e4aa8.chunk.js",
+    "main.js.map": "/rumptz.tech/static/js/main.e02e4aa8.chunk.js.map",
     "runtime-main.js": "/rumptz.tech/static/js/runtime-main.fe7d56d3.js",
     "runtime-main.js.map": "/rumptz.tech/static/js/runtime-main.fe7d56d3.js.map",
     "static/js/2.afeb9597.chunk.js": "/rumptz.tech/static/js/2.afeb9597.chunk.js",
@@ -23,7 +23,7 @@
     "static/media/datenight.67894ced.jpg": "/rumptz.tech/static/media/datenight.67894ced.jpg",
     "static/media/devu_logo.9b8c7c9e.png": "/rumptz.tech/static/media/devu_logo.9b8c7c9e.png",
     "static/media/friendzies.7bbdac1c.jpg": "/rumptz.tech/static/media/friendzies.7bbdac1c.jpg",
-    "static/media/hero.5ede4182.jpg": "/rumptz.tech/static/media/hero.5ede4182.jpg",
+    "static/media/hero.596bce55.jpg": "/rumptz.tech/static/media/hero.596bce55.jpg",
     "static/media/j-scott-rumptz.b72b4c6b.jpg": "/rumptz.tech/static/media/j-scott-rumptz.b72b4c6b.jpg",
     "static/media/j-scott-rumptz_2.eafedaf4.jpg": "/rumptz.tech/static/media/j-scott-rumptz_2.eafedaf4.jpg",
     "static/media/logo.7da8af2d.svg": "/rumptz.tech/static/media/logo.7da8af2d.svg",
@@ -37,6 +37,6 @@
     "static/js/runtime-main.fe7d56d3.js",
     "static/js/2.afeb9597.chunk.js",
     "static/css/main.ead2525d.chunk.css",
-    "static/js/main.2cfbdcec.chunk.js"
+    "static/js/main.e02e4aa8.chunk.js"
   ]
 }
