@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/rumptz.tech/static/css/main.ead2525d.chunk.css",
-    "main.js": "/rumptz.tech/static/js/main.169e048f.chunk.js",
-    "main.js.map": "/rumptz.tech/static/js/main.169e048f.chunk.js.map",
+    "main.js": "/rumptz.tech/static/js/main.40a281a2.chunk.js",
+    "main.js.map": "/rumptz.tech/static/js/main.40a281a2.chunk.js.map",
     "runtime-main.js": "/rumptz.tech/static/js/runtime-main.06adf884.js",
     "runtime-main.js.map": "/rumptz.tech/static/js/runtime-main.06adf884.js.map",
     "static/js/2.c19f6b92.chunk.js": "/rumptz.tech/static/js/2.c19f6b92.chunk.js",
@@ -31,12 +31,13 @@
     "static/media/rumptz-html.2ccc38aa.JPG": "/rumptz.tech/static/media/rumptz-html.2ccc38aa.JPG",
     "static/media/standupkids.9acb88ee.jpg": "/rumptz.tech/static/media/standupkids.9acb88ee.jpg",
     "static/media/sucity.96561906.jpg": "/rumptz.tech/static/media/sucity.96561906.jpg",
+    "static/media/taroble-cards.fddee15d.jpg": "/rumptz.tech/static/media/taroble-cards.fddee15d.jpg",
     "static/media/this-site.f10b0030.jpg": "/rumptz.tech/static/media/this-site.f10b0030.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.06adf884.js",
     "static/js/2.c19f6b92.chunk.js",
     "static/css/main.ead2525d.chunk.css",
-    "static/js/main.169e048f.chunk.js"
+    "static/js/main.40a281a2.chunk.js"
   ]
 }
