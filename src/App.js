@@ -27,6 +27,8 @@ function App() {
                             exact path="/"
                             component={() => <About setPage={setPage}/>}
                         />
+                        <Route component={() => <About setPage={setPage}/>}
+                        />
                         <Route path='/portfolio' component={Portfolio}/>
                         <Route path='/resume' component={Resume}/>
                         <Route path='/contact' component={Contact}/>
