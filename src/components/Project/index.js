@@ -7,10 +7,30 @@ import suKidsImage from '../../assets/images/projects/standupkids.jpg'
 import riftsImage from '../../assets/images/projects/riftscc.jpg'
 import rumptzImage from '../../assets/images/projects/rumptz-html.JPG'
 import thisImage from '../../assets/images/projects/this-site.jpg'
+import tarobleImage from '../../assets/images/projects/taroble-cards.jpg'
 
 function Project() {
     const [projects] = useState([
         {
+            image: tarobleImage,
+            title: 'Taroble Cards',
+            description:'I was fortunate enough to be a part of a dream team during my final project at my Full Stack Web Development course at Vanderbilt University. We had a lot of fun taking a bit of everything we had learned to make a slick and humorous React web application!',
+            deployLink: 'https://taroble-cards.herokuapp.com/',
+            repoLink: 'https://github.com/MeaghanCampbell/taroble-cards',
+            skills: [
+                'Node.js',
+                'React',
+                'Express.js',
+                'MongoDB',
+                'Apollo',
+                'GraphQL',
+                'react-spring',
+                'SVGator',
+                'bcrypt',
+                'JSON Web Token',
+                'random-js'
+            ]
+        },{
             image: alienImage,
             title: 'Alien Lifeform Generator',
             description:'Conceptualized, designed and created an application to assist TTRPG game masters, role players, and artists in character creation and design. Each lifeform will be generated with a random backstory, physical description, and list of abilities!',

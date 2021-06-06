@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
+import emailjs from 'emailjs-com';
 
 function Contact() {
     const [errorMessage, setErrorMessage] = useState('');
@@ -32,8 +33,14 @@ function Contact() {
     function handleSubmit(e) {
         e.preventDefault();
         if (!disabled) {
-            console.log(formState);
-            setErrorMessage('Your message has been sent')
+            emailjs.send('service_0gogeq2','template_uif2rwo', formState, 'user_OTEkH32EWevHrSCBlNf0o')
+                .then((response) => {
+                    setErrorMessage('Your message has been sent!')
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (err) => {
+                    setErrorMessage('FAILED... see console log for details')
+                    console.log('FAILED...', err);
+                });
         }
     }
 

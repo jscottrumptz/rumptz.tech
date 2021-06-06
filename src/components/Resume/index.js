@@ -367,10 +367,10 @@ function Resume() {
 
                         <div className="sm:col-span-3 self-center">
                             <dt className="text-sm font-medium text-gray-500">
-                                Full Stack Web Development Bootcamp
+                                Full Stack Web Development Boot Camp
                             </dt>
                             <dd className="mt-1 text-sm text-gray-900 pb-20 sm:pb-0">
-                                Currently Enrolled
+                                6/21
                             </dd>
                         </div>
 

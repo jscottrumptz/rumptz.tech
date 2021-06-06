@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer(props) {
     const {
@@ -10,31 +11,31 @@ function Footer(props) {
             <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
                 <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                     <div className="px-5 py-2">
-                        <a href="#" onClick={() => setPage('about')}
+                        <Link to="/" onClick={() => setPage('about')}
                            className="text-base text-gray-500 hover:text-gray-900">
                             About
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="#" onClick={() => setPage('portfolio')}
+                        <Link to="/portfolio" onClick={() => setPage('portfolio')}
                             className="text-base text-gray-500 hover:text-gray-900">
                             Portfolio
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="#" onClick={() => setPage('resume')}
+                        <Link to="resume" onClick={() => setPage('resume')}
                             className="text-base text-gray-500 hover:text-gray-900">
                             Resume
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="px-5 py-2">
-                        <a href="#" onClick={() => setPage('contact')}
+                        <Link to="/contact" onClick={() => setPage('contact')}
                             className="text-base text-gray-500 hover:text-gray-900">
                             Contact
-                        </a>
+                        </Link>
                     </div>
 
                 </nav>

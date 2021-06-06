@@ -14,7 +14,7 @@ function Portfolio() {
                 <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
                     <div className="md:ml-auto md:w-1/2 md:pl-10">
                         <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
-                            updated 4.13.21
+                            updated 6.6.21
                         </h2>
                         <p className="mt-2 text-white text-3xl font-bold tracking-tight sm:text-4xl">
                             My Portfolio
