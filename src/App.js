@@ -1,42 +1,34 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
-import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
     const [page, setPage] = useState('about')
 
     return (
-        <Router>
-            <ScrollToTop/>
-            <div className="App w-full">
-                <div className="fixed w-full z-50">
-                    <Nav
-                        page={page}
-                        setPage={setPage}
-                    />
-                </div>
-                <div className="w-full z-0">
-                    <Switch>
-                        <Route
-                            exact path="/"
-                            component={() => <About setPage={setPage}/>}
-                        />
-                        <Route path='/portfolio' component={Portfolio}/>
-                        <Route path='/resume' component={Resume}/>
-                        <Route path='/contact' component={Contact}/>
-                    </Switch>
-                </div>
-                <Footer
+        <div className="App w-full">
+            <div className="fixed w-full z-50">
+                <Nav
+                    page={page}
                     setPage={setPage}
                 />
             </div>
-        </Router>
+            <div className="w-full z-0">
+                { page === 'about' &&  <About
+                    setPage={setPage}
+                /> }
+                { page === 'portfolio' &&  <Portfolio/> }
+                { page === 'resume' &&  <Resume/> }
+                { page === 'contact' &&  <Contact/> }
+            </div>
+            <Footer
+                setPage={setPage}
+            />
+        </div>
     );
 }
 

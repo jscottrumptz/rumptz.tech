@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
 import logo from "../../assets/images/logo.svg";
 
 function Nav(props) {
@@ -54,37 +53,37 @@ function Nav(props) {
                         </div>
                         <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
 
-                            { page === 'about' &&  <Link to="/" onClick={() => setPage('about')}
+                            { page === 'about' &&  <a href="#"  onClick={() => setPage('about')}
                                className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 About
-                            </Link> }
-                            { page != 'about' &&  <Link to="/"  onClick={() => setPage('about')}
+                            </a> }
+                            { page != 'about' &&  <a href="#"  onClick={() => setPage('about')}
                                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                 About
-                            </Link> }
+                            </a> }
 
-                            { page === 'portfolio' &&  <Link to="/portfolio" onClick={() => setPage('portfolio')}
+                            { page === 'portfolio' &&  <a href="#"  onClick={() => setPage('portfolio')}
                                                       className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 Portfolio
-                            </Link> }
-                            { page != 'portfolio' &&  <Link to="/portfolio"  onClick={() => setPage('portfolio')}
+                            </a> }
+                            { page != 'portfolio' &&  <a href="#"  onClick={() => setPage('portfolio')}
                                                      className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                 Portfolio
-                            </Link> }
+                            </a> }
 
-                            { page === 'resume' &&  <Link to="/resume"  onClick={() => setPage('resume')}
+                            { page === 'resume' &&  <a href="#"  onClick={() => setPage('resume')}
                                                           className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">
                                 Resume
-                            </Link> }
-                            { page != 'resume' &&  <Link to="/resume"  onClick={() => setPage('resume')}
+                            </a> }
+                            { page != 'resume' &&  <a href="#"  onClick={() => setPage('resume')}
                                                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                 Resume
-                            </Link> }
+                            </a> }
                         </div>
                     </div>
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
-                            <Link to="/contact" onClick={() => setPage('contact')}>
+                            <a href="#" onClick={() => setPage('contact')}>
                                 <button type="button"
                                         className="relative inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500">
 
@@ -95,7 +94,7 @@ function Nav(props) {
                                     </svg>
                                     <span>Contact</span>
                                 </button>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -105,29 +104,29 @@ function Nav(props) {
             <div className="md:hidden" id="mobile-menu">
                 <div className={hidden}>
 
-                    { page === 'about' &&  <Link href="#" onClick={function() {setPage('about'); setToggle(!toggleHidden);}}
+                    { page === 'about' &&  <a href="#" onClick={function() {setPage('about'); setToggle(!toggleHidden);}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                        aria-current="page">About</Link> }
+                        aria-current="page">About</a> }
 
-                    { page != 'about' &&  <Link href="#" onClick={function() {setPage('about'); setToggle(!toggleHidden);}}
+                    { page != 'about' &&  <a href="#" onClick={function() {setPage('about'); setToggle(!toggleHidden);}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >About</Link> }
+                        >About</a> }
 
-                    { page === 'portfolio' &&  <Link href="#" onClick={function() {setPage('portfolio'); setToggle(!toggleHidden);}}
+                    { page === 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setToggle(!toggleHidden);}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                        aria-current="page">Portfolio</Link> }
+                        aria-current="page">Portfolio</a> }
 
-                    { page != 'portfolio' &&  <Link href="#" onClick={function() {setPage('portfolio'); setToggle(!toggleHidden);}}
+                    { page != 'portfolio' &&  <a href="#" onClick={function() {setPage('portfolio'); setToggle(!toggleHidden);}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >Portfolio</Link> }
+                        >Portfolio</a> }
 
-                    { page === 'resume' &&  <Link href="#" onClick={function() {setPage('resume'); setToggle(!toggleHidden);}}
+                    { page === 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setToggle(!toggleHidden);}}
                         className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
-                        aria-current="page">Resume</Link> }
+                        aria-current="page">Resume</a> }
 
-                    { page != 'resume' &&  <Link href="#" onClick={function() {setPage('resume'); setToggle(!toggleHidden);}}
+                    { page != 'resume' &&  <a href="#" onClick={function() {setPage('resume'); setToggle(!toggleHidden);}}
                         className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >Resume</Link> }
+                        >Resume</a> }
 
                 </div>
             </div>
