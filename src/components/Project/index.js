@@ -8,10 +8,22 @@ import riftsImage from '../../assets/images/projects/riftscc.jpg'
 import rumptzImage from '../../assets/images/projects/rumptz-html.JPG'
 import thisImage from '../../assets/images/projects/this-site.jpg'
 import tarobleImage from '../../assets/images/projects/taroble-cards.jpg'
+import dverseImage from '../../assets/images/projects/d-verse.jpg'
 
 function Project() {
     const [projects] = useState([
         {
+            image: dverseImage,
+            title: 'd-verse.com',
+            description:'Website for my tabletop game publishing company. Created all copy, graphics, 3D models, and design. I even created the games.',
+            deployLink: 'https://www.d-verse.com/',
+            repoLink: 'https://github.com/jscottrumptz/d-verse-vite-vue',
+            skills: [
+                'Vue',
+                'JavaScript',
+                'Tailwind CSS',
+            ]
+        },{
             image: tarobleImage,
             title: 'Taroble Cards',
             description:'I was fortunate enough to be a part of a dream team during my final project at my Full Stack Web Development course at Vanderbilt University. We had a lot of fun taking a bit of everything we had learned to make a slick and humorous React web application!',
